@@ -24,7 +24,7 @@ async function displayCountry(country) {
         errorMessage.textContent = '';
         bordersSection.innerHTML = '';
 
-        const response = await fetch(`https://restcountries.com/v3.1/name/${country}`);
+        const response = await fetch(`https://restcountries.com/v3.1/name/${country}?fullText=true`);
         if (!response.ok) {
             throw new Error(`Country not found`);
         }
@@ -45,7 +45,7 @@ async function displayCountry(country) {
         if (countryData.borders && countryData.borders.length > 0) {
 
             for (const code of countryData.borders) {
-                const borderResponse = await fetch(`https://restcountries.com/v3.1/alpha/${code}`);
+                const borderResponse = await fetch(`https://restcountries.com/v3.1/alpha/${code}?fullText=true`);
                 const borderData = await borderResponse.json();
                 const neighbor = borderData[0];
 
