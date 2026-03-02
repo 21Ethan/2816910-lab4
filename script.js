@@ -63,6 +63,9 @@ async function displayCountry(country) {
 
     } catch (error) {
         errorMessage.textContent = 'Error: ' + error.message;
+         document.getElementById('country-input').value = ''; // ✅ Clear input
+    document.getElementById('country-info').innerHTML = ''; // Optional: clear old data
+    document.getElementById('bordering-countries').innerHTML = ''; // Optional: clear borders
     } finally {
         spinner.classList.add('hidden');
     }
