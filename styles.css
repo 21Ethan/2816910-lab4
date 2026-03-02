@@ -1,0 +1,40 @@
+.spinner {
+    /* Your styling */
+    animation: spin 1s linear infinite; /* Required */
+    width: 50px;
+    height: 50px;
+    border: 5px solid lightgray;
+    border-top: 5px solid black;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.country-card{
+    background-color: burlywood;
+    font-family: cursive;
+    padding: 20px;
+    font-weight: bolder;
+}
+
+.border-grid{
+     display: grid;
+    background-color: dodgerblue;
+    grid-template-columns: auto auto auto;
+}
+
+.error{
+    font-weight: 900;
+    background-color: red;
+
+}
+
+
+
+.hidden {
+    display: none;
+}
